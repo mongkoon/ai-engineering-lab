@@ -1,8 +1,12 @@
-# MLOps
+# MLOps Engineering
 
-- [ ] 실험 추적과 아티팩트 계보
-- [ ] 데이터 전처리 → 학습 → 평가 파이프라인
-- [ ] 버전·재현성·자원 요청/상한 관리
-- [ ] 배포·모니터링·재학습으로의 확장 계획
+ML 모델의 데이터 준비, 학습, 평가, 등록, 배포 자동화 및 모니터링을 기록합니다.
 
-[`kubeflow/`](kubeflow/)에서 KFP 실습을 기록합니다.
+- [Training Pipelines](training-pipelines/)
+- [Experiment Tracking](experiment-tracking/)
+- [Model Registry](model-registry/)
+- [CI/CD](cicd/)
+- [Monitoring](monitoring/)
+
+Kubeflow 플랫폼의 설치·운영은 [AI Platform / Kubeflow](../ai-platform/kubeflow/)에서 다룹니다.
+KFP를 이용한 실제 학습 파이프라인 코드는 이 디렉터리의 `training-pipelines/`에 기록합니다.

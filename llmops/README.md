@@ -1,7 +1,9 @@
-# LLMOps
+# LLMOps Engineering
 
-- [ ] 프롬프트·모델·검색 데이터 버전 관리
-- [ ] 응답 품질과 충실성 평가
-- [ ] 가드레일·로그·추적(Tracing)
-- [ ] 토큰·지연 시간·비용 모니터링
-- [ ] RAG 시스템과 연결
+LLM 기반 응용의 검색 데이터, 모델 서빙, 평가, 추적 및 비용·품질 관리를 기록합니다.
+
+- [RAG](rag/)
+- [Vector Databases](vector-databases/)
+- [LLM Serving](llm-serving/)
+- [Evaluation](evaluation/)
+- [Tracing](tracing/)

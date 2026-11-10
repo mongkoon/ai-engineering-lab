@@ -1,55 +1,41 @@
 # AI Engineering Lab
 
-> AI 엔지니어링 학습과 실습을 **설계 → 구축 → 검증 → 운영 → 회고** 순서로 기록하는 개인 기술 저장소입니다.
+> AI 플랫폼 인프라 설계부터 MLOps·LLMOps 실습과 운영까지 **설계 → 구축 → 검증 → 운영 → 회고**를 기록하는 기술 포트폴리오.
 
-클라우드 인프라부터 Linux, Docker, Kubernetes, MLOps, LLMOps, RAG까지 다룹니다. 현재는 **Oracle Cloud Infrastructure(OCI) 실습**부터 시작합니다.
+현재 시작점은 **Oracle Cloud Infrastructure(OCI)** 실습입니다. 여기서 구축한 서버를 활용해 Docker, Kubernetes, Kubeflow, MLOps, RAG 프로젝트로 확장합니다.
 
 ## 학습 영역
 
-| 영역 | 주요 주제 | 경로 |
+| 영역 | 목표 | 경로 |
 |---|---|---|
-| 기초 | AI 플랫폼 아키텍처·컴퓨팅 개념 | [`fundamentals/`](fundamentals/) |
-| Linux | 서버 관리, 네트워크, 권한 | [`linux/`](linux/) |
-| Containers | 이미지, Dockerfile, Compose | [`docker/`](docker/) |
-| Kubernetes | Pod, Deployment, Service, Storage | [`kubernetes/`](kubernetes/) |
-| Cloud | OCI · AWS · GCP · Azure | [`cloud/`](cloud/) |
-| IaC | Terraform, Ansible | [`infrastructure-as-code/`](infrastructure-as-code/) |
-| MLOps | Kubeflow, KFP, 실험·아티팩트 관리 | [`mlops/`](mlops/) |
-| LLMOps | 관측성, 품질 평가, 비용, 가드레일 | [`llmops/`](llmops/) |
-| RAG | 청킹, 임베딩, 벡터 검색, 평가 | [`rag/`](rag/) |
-| 통합 | 엔드투엔드 프로젝트 | [`projects/`](projects/) |
+| Fundamentals | AI 엔지니어링·네트워크·시스템 설계 | [fundamentals/](fundamentals/) |
+| Infrastructure | Linux, Docker, Kubernetes, Terraform, Ansible | [infrastructure/](infrastructure/) |
+| Cloud | OCI, AWS, GCP, Azure | [cloud/](cloud/) |
+| AI Platform | 플랫폼 아키텍처, Kubeflow, 서빙, 관측성 | [ai-platform/](ai-platform/) |
+| MLOps | 학습 파이프라인, 실험 추적, 모델 등록, CI/CD | [mlops/](mlops/) |
+| LLMOps | RAG, 벡터DB, 서빙, 평가, 추적 | [llmops/](llmops/) |
+| Projects | End-to-End 구현·검증 | [projects/](projects/) |
 
-## 현재 진행: OCI 기반 AI 플랫폼 실습 환경
+## 첫 번째 실습: OCI 기반 AI 플랫폼 인프라
 
-1. [`cloud/oci/00-scope-and-spec.md`](cloud/oci/00-scope-and-spec.md) — 목표 및 VM 사양 확정
-2. [`cloud/oci/01-cost-guardrails.md`](cloud/oci/01-cost-guardrails.md) — 비용·무료 크레딧·알림 확인
-3. [`cloud/oci/02-account-iam.md`](cloud/oci/02-account-iam.md) — IAM과 접근 보호
-4. [`cloud/oci/03-network.md`](cloud/oci/03-network.md) — 네트워크 구성
-5. [`cloud/oci/04-compute.md`](cloud/oci/04-compute.md) — 인스턴스 및 스토리지
-6. [`cloud/oci/05-server-bootstrap.md`](cloud/oci/05-server-bootstrap.md) — 초기 서버 점검
-7. [`cloud/oci/06-docker.md`](cloud/oci/06-docker.md) — 컨테이너 환경
-8. [`cloud/oci/07-kubernetes.md`](cloud/oci/07-kubernetes.md) — Kubernetes 실습
-9. [`cloud/oci/08-operations-and-cost.md`](cloud/oci/08-operations-and-cost.md) — 사용량과 비용 관찰
-10. [`cloud/oci/09-teardown.md`](cloud/oci/09-teardown.md) — 사용 종료 및 잔여 과금 점검
+1. [목표 및 VM 사양 확정](cloud/oci/00-scope-and-spec.md)
+2. [비용·무료 크레딧·알림](cloud/oci/01-cost-guardrails.md)
+3. [계정/IAM](cloud/oci/02-account-iam.md)
+4. [VCN/네트워크](cloud/oci/03-network.md)
+5. [컴퓨트 인스턴스](cloud/oci/04-compute.md)
+6. [서버 초기화](cloud/oci/05-server-bootstrap.md)
+7. [Docker](cloud/oci/06-docker.md)
+8. [Kubernetes](cloud/oci/07-kubernetes.md)
+9. [운영 및 비용](cloud/oci/08-operations-and-cost.md)
+10. [실습 종료 및 과금 확인](cloud/oci/09-teardown.md)
 
-> **상태 안내:** 이 저장소는 초기 템플릿입니다. 체크박스는 실습 완료 후 직접 갱신하고, 성공하지 않은 명령이나 테스트를 완료로 표시하지 않습니다.
+> **현재 상태:** 저장소 구조와 문서 초안만 준비된 상태입니다. 실습 완료 여부는 실제 검증 후 갱신합니다.
 
 ## 기록 원칙
 
-- 왜 이 구성을 선택했는지 **의사결정 근거**와 대안을 함께 적습니다.
-- 실제로 실행한 **명령 / 결과 / 오류 / 해결 방법**을 구분해 기록합니다.
-- OCI 요금과 서비스 제공 여부는 **실습 당일 콘솔·공식 문서에서 재확인**합니다.
-- 계정 식별자, API 키, SSH 개인키, 토큰, 외부 공개 IP 및 개인정보 등은 공개 저장소에 올리기 전에 비식별화합니다.
-- 문서 양식은 [`docs/templates/`](docs/templates/)를 참고합니다.
-
-## 빠른 시작
-
-```bash
-git clone <YOUR_REPOSITORY_URL>
-cd ai-engineering-lab
-# cloud/oci/00-scope-and-spec.md에서 목표와 사양부터 기록
-```
-
-## 참고
-
-이 저장소는 자체 작성한 실습 기록을 중심으로 합니다. 수업 강의자료·타인의 저작물은 이용 권한을 확인한 경우에만 포함합니다.
+- 실행 명령과 관찰 결과, 오류, 해결 과정, 기술 선택 이유를 구분해서 기록합니다.
+- 실제 프로젝트 구성은 [`projects/`](projects/)에, 반복 가능한 스크립트는 [`scripts/`](scripts/)에 저장합니다.
+- 공통 문서 양식은 [`docs/templates/`](docs/templates/)를 사용합니다.
+- 토큰, API 키, 개인키, 비밀번호, 실제 계정 식별자, 민감한 환경값은 커밋하지 않습니다.
+- 클라우드 요금·무료 티어 조건은 실습 시점의 공식 문서와 콘솔을 기준으로 확인합니다.
+- 외부 강의자료를 그대로 재배포하지 않고 직접 작성한 실습 코드와 결과를 중심으로 관리합니다.

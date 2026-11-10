@@ -1,0 +1,52 @@
+# OS, editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Sensitive files
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.pfx
+*.key
+*.kdbx
+*credentials*
+*secret*.json
+*service-account*.json
+.kube/
+kubeconfig
+kubeconfig.*
+.oci/
+oci_api_key*.pem
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+crash.log
+crash.*.log
+
+# Python and notebooks
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+
+# Generated and local data
+logs/
+*.log
+outputs/
+data/raw/
+data/private/
+models/local/
+*.zip
+node_modules/

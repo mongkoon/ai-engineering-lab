@@ -6,4 +6,4 @@
 - [ ] Docker Compose 기반 서비스 구성
 - [ ] 볼륨, 네트워크, 로그, 자원 제한
 
-클라우드 실습 시작점: [`cloud/oci/06-docker.md`](../cloud/oci/06-docker.md).
+클라우드 실습 시작점: [`cloud/oci/06-docker.md`](../../cloud/oci/06-docker.md).
