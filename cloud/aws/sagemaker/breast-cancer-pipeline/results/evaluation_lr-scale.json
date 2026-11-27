@@ -1,0 +1,36 @@
+{
+  "positive_class": 0,
+  "positive_class_name": "malignant",
+  "test_samples": 114,
+  "metrics": {
+    "accuracy": {
+      "value": 0.9824561403508771
+    },
+    "precision": {
+      "value": 0.9761904761904762
+    },
+    "recall": {
+      "value": 0.9761904761904762
+    },
+    "f1": {
+      "value": 0.9761904761904762
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      0,
+      1
+    ],
+    "matrix": [
+      [
+        41,
+        1
+      ],
+      [
+        1,
+        71
+      ]
+    ],
+    "malignant_false_negatives": 1
+  }
+}

@@ -1,0 +1,6 @@
+# Local preprocessing, training, evaluation, reporting
+numpy>=1.24,<3
+pandas>=2.0,<3
+scikit-learn>=1.4,<2
+joblib>=1.3,<2
+boto3>=1.34,<2

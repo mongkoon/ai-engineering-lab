@@ -1,0 +1,3 @@
+# SageMaker SDK 3.x configuration used in the AWS evaluation runs.
+# Install separately in an AWS JupyterLab environment when building/upserting.
+sagemaker[train,mlops]==3.26.0
